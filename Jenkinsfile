@@ -10,6 +10,7 @@ pipeline {
         
         stage("Build") {
             steps {
+                sh 'sudo chown -R $USER:$USER /home/ubuntu/jenkins/workspace/demo-cicd/mysql-data || true'
                 sh "docker build -t two-tier-flask-app ."
             }
         }
