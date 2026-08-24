@@ -44,19 +44,19 @@ pipeline {
 post {
     success{
         script{
-            emailext from: "meraj21ahmed@gmail.com",
-            subject: "Build Successfull",
-            body: "Good News: Your Build was successful!",
-            to: "meraj21ahmed@gmail.com"
+            emailext from: 'meraj21ahmed@gmail.com',
+            to: 'meraj21ahmed@gmail.com',
+            subject: 'Build Successfull',
+            body: 'Good News: Your Build was successful!' 
         }
   
     }
     failure{
         script{
-            emailext from: "meraj21ahmed@gmail.com",
-            subject: "Build Failed",
-            body: "Bad News: Your Build was Failed!",
-            to: "meraj21ahmed@gmail.com"
+            emailext from: 'meraj21ahmed@gmail.com',
+            to: 'meraj21ahmed@gmail.com',
+            subject: 'Build Failed',
+            body: 'Bad News: Your Build was Failed!'
         }
   
     }
