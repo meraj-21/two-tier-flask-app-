@@ -42,23 +42,19 @@ pipeline {
         }
     }
 post {
-    success{
-        script{
-            emailext from: 'meraj21ahmed@gmail.com',
+    success {
+        emailext (
             to: 'meraj11ahmed@gmail.com',
-            subject: 'Build Successfull',
+            subject: 'Build Successful',
             body: 'Good News: Your Build was successful!' 
-        }
-  
+        )
     }
-    failure{
-        script{
-            emailext from: 'meraj21ahmed@gmail.com',
+    failure {
+        emailext (
             to: 'meraj11ahmed@gmail.com',
             subject: 'Build Failed',
-            body: 'Bad News: Your Build was Failed!'
-        }
-  
+            body: 'Bad News: Your Build has failed!'
+        )
     }
 }
 }
