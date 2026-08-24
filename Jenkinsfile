@@ -7,7 +7,11 @@ pipeline {
                 git url: "https://github.com/meraj-21/two-tier-flask-app-.git", branch: "master"
             }
         } 
-        
+        stage("Trivy File System Scan"){
+            steps{
+                sh "trivy fs . -o results.json"
+            }
+        }
         stage("Build") {
             steps {
                 //sh 'sudo chown -R $USER:$USER /home/ubuntu/jenkins/workspace/demo-cicd/mysql-data'
