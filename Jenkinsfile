@@ -45,12 +45,12 @@ post {
     success{
         emailext subject: "Build Successfull",
         body: "Good News: Your Build was successful!",
-        to: 'meraj21ahmed@gmail.com'
+        to: "${meraj21ahmed@gmail.com}"
     }
     failure{
         emailext subject: "Build Failed",
         body: "Bad News: Your Build was Failed!",
-        to: 'meraj21ahmed@gmail.com'  
+        to: "${meraj21ahmed@gmail.com}"  
     }
 }
 }
