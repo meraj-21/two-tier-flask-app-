@@ -39,19 +39,6 @@ pipeline {
         }
     }
 post {
-    success {
-        emailext (
-            to: 'meraj11ahmed@gmail.com',
-            subject: 'Build Successful',
-            body: 'Good News: Your Build was successful!' 
-        )
-    }
-    failure {
-        emailext (
-            to: 'meraj11ahmed@gmail.com',
-            subject: 'Build Failed',
-            body: 'Bad News: Your Build has failed!'
-        )
-    }
+    email_notification()
 }
 }
