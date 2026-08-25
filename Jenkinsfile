@@ -42,7 +42,7 @@ post {
     success {
             email_notification('Successful', 'Good News: Your Build was successful!')
         }
-        failure {
+    failure {
             email_notification('Failed', 'Bad News: Your Build has failed!')
         }
 }
